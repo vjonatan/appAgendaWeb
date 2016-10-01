@@ -20,7 +20,7 @@ public class Tactividad implements Serializable {
 	@Lob
 	private String descripcion;
 
-	private byte estado;
+	private boolean estado;
 
 	private String fechaHoraFin;
 
@@ -58,11 +58,11 @@ public class Tactividad implements Serializable {
 		this.descripcion = descripcion;
 	}
 
-	public byte getEstado() {
+	public boolean getEstado() {
 		return this.estado;
 	}
 
-	public void setEstado(byte estado) {
+	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
 
