@@ -11,5 +11,5 @@ public interface IDaoUsuario {
 	public Tusuario getById(EntityManager em, Tusuario usuario) throws Exception;
 	
 	public boolean update(EntityManager em, Tusuario usuario) throws Exception;
-
+	//*//
 }

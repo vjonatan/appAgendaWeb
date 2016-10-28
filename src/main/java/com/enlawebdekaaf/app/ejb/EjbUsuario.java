@@ -14,6 +14,7 @@ import com.enlawebdekaaf.app.dao.DaoUsuario;
 import com.enlawebdekaaf.app.daointerface.IDaoUsuario;
 import com.enlawebdekaaf.app.ejbinterface.IEjbUsuario;
 import com.enlawebdekaaf.app.entity.Tusuario;
+import com.enlawebdekaaf.appAgendaWeb.MiHelper;
 
 @Stateless
 public class EjbUsuario implements IEjbUsuario {
@@ -41,6 +42,8 @@ public class EjbUsuario implements IEjbUsuario {
 			
 			usuario.setFechaRegistro(fechaActual);
 			usuario.setFechaModificacion(fechaActual);
+			
+			usuario.setContrasenia(new MiHelper().encrypt(usuario.getContrasenia()));
 			
 			IDaoUsuario iDaoUsuario = new DaoUsuario();
 			
